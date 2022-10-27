@@ -34,5 +34,31 @@ public class EX1연산 { // class start
                 //   10 + 10 : 숫자 [ 숫자+숫자 = 숫자 ]
                 //  "10"+10 : 문자 [ 문자+숫자 = 문자 ]
 
+        /////////////////////////// 비교 연산자--> true/false /////////////////////
+        // 1.  > 크다 , 초과
+        System.out.println( 10 > 3 );   // 10 이 3보다 크다 /  true
+        // 2.  < 작다 , 미만
+        System.out.println( 10 < 3 );   // 10 은 3보다 작다 / false
+        // 3.  >= 이상 , 크거나같다
+        System.out.println( 10 >= 3 );  // 10 은 3보다 이상 / true
+        // 4.  <= 이하 , 작거나같다
+        System.out.println( 10 <= 3 );  // 10 은 보다 이하 / false
+        // 5.  == 같다 , 동일하다
+        System.out.println( 10 == 3 );  // 10 과 3은 같다   / false
+        // 6.  != 같지않다 , 아니다 등
+        System.out.println( 10 != 3 );  // 10 과 3과 다르다 / true
+        ////////////////////////////
+
+
     } // main end
 } // class end
+
+
+
+
+
+
+
+
+
+
