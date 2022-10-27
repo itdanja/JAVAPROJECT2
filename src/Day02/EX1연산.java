@@ -59,7 +59,6 @@ public class EX1연산 { // class start
         // 3. ! : not [ 부정 / 반대 ]
         System.out.println( " ! : " +  !( 10 >= 3 ) ); // true 가 ! 만나면 false / false 가 ! 만나면 true
 
-
     } // main end
 } // class end
 /*
