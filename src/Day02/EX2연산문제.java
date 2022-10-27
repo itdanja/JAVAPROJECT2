@@ -31,13 +31,6 @@ public class EX2연산문제 { // class s
 
 
 
-
-
-
-
-
-
-
     } // main e
 } // class e
 /*
