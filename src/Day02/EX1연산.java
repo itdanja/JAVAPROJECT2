@@ -47,11 +47,47 @@ public class EX1연산 { // class start
         System.out.println( 10 == 3 );  // 10 과 3은 같다   / false
         // 6.  != 같지않다 , 아니다 등
         System.out.println( 10 != 3 );  // 10 과 3과 다르다 / true
-        ////////////////////////////
+        //////////////////////////// 논리 연산자 [  비교연산자 2개 이상일떄 ]
+        // 1. && : and
+        System.out.println( " && : " + ( 10 >= 3 && 20 >= 10 ) ); // true and true => true
+                        // 10 이 3보다 이상 [이면서] 20이 10보다 이상
+        System.out.println( " && : " + ( 10 >= 3 && 20 >= 30 ) ); // true and false => false
+                        // 10 이 3보다 이상 [ 이면서 ] 20 이 30보다 이상
+        // 2. || : or
+        System.out.println( " || : " + ( 10 >= 3 || 20 >= 10 ) );   // true or true => true
+        System.out.println( " || : " + ( 10 >= 3 || 20 >= 30 ) );   // true or false => true
+        // 3. ! : not [ 부정 / 반대 ]
+        System.out.println( " ! : " +  !( 10 >= 3 ) ); // true 가 ! 만나면 false / false 가 ! 만나면 true
 
 
     } // main end
 } // class end
+/*
+    연산자
+    1. 산술연산자
+        + 더하기 -빼기 *곱하기 /나누기[몫] %나누기[나머지]
+    2. 비교연산자
+        >초과 <미만 >=이상 <=이하 ==같다 !=같지않다
+    3. 논리연산자 : 비교연산자 2개 이상일경우
+        - 초등학생이 사탕 이면서 초콜릿 먹을래  [ 2개 다 먹을래 ]
+        - 초등학생이 사탕 이거나 초콜릿 먹을래  [ 둘 중 하나 먹을래 ]
+        && : [ and ] 이면서 면서 이고 모두 그리고  : 모두 참 이면 참
+        || : [ or ] 이거나 거나 또는 하나라도      : 하나라도 참 이면 참
+        ! : [ not ] 반대 [ true -> false   / false -> true ]
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
