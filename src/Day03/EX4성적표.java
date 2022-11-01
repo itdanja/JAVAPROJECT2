@@ -23,8 +23,8 @@ public class EX4성적표 { // class s
         System.out.print(" 수학 : ");
         int 수학 = scanner.nextInt();
 
-            int 총점 = 국어 + 영어 + 수학;
-            int 평균 = 총점/3;
+        int 총점 = 국어 + 영어 + 수학;  // 변수 3개 더한값을 새로운 변수에 저장
+        int 평균 = 총점/3;              // 변수를 이용해서 계산된 결과를 새로운 변수에저장
 
         // 8. 결과 출력 [ 모든 변수 출력 ]
         System.out.println("------------------ 성적표 ------------");
