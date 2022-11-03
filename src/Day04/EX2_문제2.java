@@ -22,7 +22,18 @@ public class EX2_문제2 { // c s
         System.out.println("결과 : " + (인치*2.54) +"cm" );
 
         // 문제6 : 중간 , 기말 , 수행   3개의 점수를 정수로 입력받아 반영비율별 계산
-            // 중간고사 30%  // 기말고사 30%   // 수행평가  40%
+            // 중간고사 30%  // 기말고사 30%   // 수행평가  40%     // int * double = double
+        System.out.print("중간고사 : ");
+            double 중간고사 = scanner.nextInt() * 0.3;
+        System.out.print("기말고사 : ");
+            double 기말고사 = scanner.nextInt() * 0.3;
+        System.out.print("수행평가 : ");
+            double 수행평가 = scanner.nextInt() * 0.4;
+        System.out.println("결과 : " + (중간고사+기말고사+수행평가) );
+                                    // 컨트롤+스페이바 : 자동완성[추천]
+
+
+
 
     } // m e
 }// c e
