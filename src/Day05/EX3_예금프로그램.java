@@ -28,7 +28,28 @@ public class EX3_예금프로그램 { // class s
                     System.out.println("안내] 계좌번호 일치 하지 않습니다. ");
                 } // else e
             } // if 1 e
-            else if( 선택 == 2 )   System.out.println("==== 출금 화면 ====");
+            else if( 선택 == 2 ) { // else if 2 s
+                System.out.println("==== 출금 화면 ====");
+                System.out.print("계좌번호 : "); int 입력계좌 = sc.nextInt();
+                System.out.print("비밀번호 : "); int 입력비밀번호 = sc.nextInt();
+
+                // 만약에 계좌번호와 입력한계좌와 같으면서 비밀번호 와 입력한비밀번호 가 같으면
+                if( 계좌번호 == 입력계좌 && 비밀번호 == 입력비밀번호 ){ // if s
+
+                    System.out.print("출금액 : "); int 입력금액 = sc.nextInt();
+                    // 만약에 입력받은 금액보다 예금액이 더 적으면 출금불가
+                    if( 예금액 < 입력금액  ){ // if s
+                        System.out.println("안내] 예금액이 부족합니다. ");
+                    }// if e
+                    else{ // else s
+                        예금액 = 예금액 - 입력금액;
+                        System.out.println("안내] 출금 이 완료 되었습니다,!! ");
+                    } // else e
+                }else{ // else s
+                    System.out.println("안내] 정보가 일치하지 않습니다.");
+                } // else e
+
+            } // else if 2 e
             else if( 선택 == 3 )   System.out.println("==== 잔고확인 화면 ====");
             else if( 선택 == 4 )   { // else if 4 s
                 System.out.println("==== 시스템종료합니다. ====");
