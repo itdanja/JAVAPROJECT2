@@ -15,7 +15,9 @@ public class EX3_예금프로그램 { // class s
         while ( true ) { // 무한반복 시작
             System.out.println("========== 이젠 은행 메뉴 ==========");
             System.out.print(" 1.예금 2.출금 3.잔고확인 4.종료 5.이체  입력 >>>> : ");
+
             int 선택 = sc.nextInt();
+
             if( 선택 == 1 ) { // if 1 s
                 System.out.println("==== 예금 화면 ====");
                 System.out.print("계좌번호 : "); int 입력계좌 = sc.nextInt();
@@ -28,6 +30,7 @@ public class EX3_예금프로그램 { // class s
                     System.out.println("안내] 계좌번호 일치 하지 않습니다. ");
                 } // else e
             } // if 1 e
+
             else if( 선택 == 2 ) { // else if 2 s
                 System.out.println("==== 출금 화면 ====");
                 System.out.print("계좌번호 : "); int 입력계좌 = sc.nextInt();
@@ -67,15 +70,31 @@ public class EX3_예금프로그램 { // class s
                 break; // 무한 반복 강제 종료
             } // else if 4 e
 
-            else if( 선택 == 5 ){ // 이체 [ 친구계좌로 이체 ]
-                /*
-                       int 친구계좌번호 = 20221109;
-                       int 친구예금액 = 0;
-                       1. 본인의 계좌번호와 비밀번호가 일치하면
-                       2. 이체할 친구의 계좌번호를 입력해서 일치하면
-                       3. 이체할 금액을 입력받아 내 예금액에서 빼기 , 친구 예금액에 더하기
-                 */
-            }
+            else if( 선택 == 5 ){ //  else if 5 s
+                System.out.println("========== 이체 ===========");
+                System.out.print("계좌번호 : "); int 입력계좌 = sc.nextInt();
+                System.out.print("비밀번호 : "); int 입력비밀번호 = sc.nextInt();
+                if( 계좌번호 == 입력계좌 && 비밀번호 == 입력비밀번호 ){ // if s
+                    System.out.print(" 이체할 계좌번호 : "); int 입력이체계좌 = sc.nextInt();
+                    if( 친구계좌번호 == 입력이체계좌 ){ // if s
+                        System.out.print(" 이체할 금액 : "); int 입력금액 = sc.nextInt();
+                        if( 예금액 < 입력금액 ){ // if s
+                            System.out.println("안내] 예금액이 부족합니다. ");
+                        } // if e
+                        else{ // else s
+                            예금액 = 예금액 - 입력금액; // 본인 예금액 에서 입력한 금액 차감
+                            친구예금액 = 친구예금액 + 입력금액; // 친구 예금액 에 입력한 금액 추가
+                            System.out.println("안내] 이체가 완료 되었습니다. ");
+                        } // else e
+                    } // if e
+                    else { // else s
+                        System.out.println("안내] 없는 계좌번호 입니다. ");
+                    } // else e
+                } // if e
+                else{ // else s
+                    System.out.println("안내] 정보가 일치하지 않습니다. ");
+                } // else e
+            } // else if 5 end
         }  // 무한반복 끝
     } // main e
 } // class e
