@@ -4,17 +4,17 @@ import java.util.Scanner;
 
 public class EX3_예금프로그램 { // class s
     public static void main(String[] args) { // main s
-        // int상자크기[4byte]의 '계좌번호'라는 이름으로 20221108 저장했다.
-        int 계좌번호 = 20221108;
-        // int상자크기[4byte]의 '비밀번호'라는 이름으로 1234 저장했다.
-        int 비밀번호 = 1234;
+        int 계좌번호 = 20221108; // int상자크기[4byte]의 '계좌번호'라는 이름으로 20221108 저장했다.
+        int 비밀번호 = 1234;  // int상자크기[4byte]의 '비밀번호'라는 이름으로 1234 저장했다.
         int 예금액 = 0; // 최초 예금액은 0 원
 
-        Scanner sc = new Scanner(System.in);
+        int 친구계좌번호 = 20221109;
+        int 친구예금액 = 0;
 
+        Scanner sc = new Scanner(System.in);
         while ( true ) { // 무한반복 시작
             System.out.println("========== 이젠 은행 메뉴 ==========");
-            System.out.print(" 1.예금 2.출금 3.잔고확인 4.종료  입력 >>>> : ");
+            System.out.print(" 1.예금 2.출금 3.잔고확인 4.종료 5.이체  입력 >>>> : ");
             int 선택 = sc.nextInt();
             if( 선택 == 1 ) { // if 1 s
                 System.out.println("==== 예금 화면 ====");
@@ -49,11 +49,33 @@ public class EX3_예금프로그램 { // class s
                 } // else e
 
             } // else if 2 e
-            else if( 선택 == 3 )   System.out.println("==== 잔고확인 화면 ====");
+
+            else if( 선택 == 3 )   { // else if 3 s
+                System.out.println("==== 잔고확인 화면 ====");
+                System.out.print("계좌번호 : "); int 입력계좌 = sc.nextInt();
+                System.out.print("비밀번호 : "); int 입력비밀번호 = sc.nextInt();
+
+                if( 계좌번호 == 입력계좌 && 비밀번호 == 입력비밀번호 ){
+                    System.out.println("잔고 : " + 예금액 ); // 변수출력
+                }else{ // else s
+                    System.out.println("안내] 정보가 일치하지 않습니다.");
+                } // else e
+            } // else if 3 e
+
             else if( 선택 == 4 )   { // else if 4 s
                 System.out.println("==== 시스템종료합니다. ====");
                 break; // 무한 반복 강제 종료
             } // else if 4 e
+
+            else if( 선택 == 5 ){ // 이체 [ 친구계좌로 이체 ]
+                /*
+                       int 친구계좌번호 = 20221109;
+                       int 친구예금액 = 0;
+                       1. 본인의 계좌번호와 비밀번호가 일치하면
+                       2. 이체할 친구의 계좌번호를 입력해서 일치하면
+                       3. 이체할 금액을 입력받아 내 예금액에서 빼기 , 친구 예금액에 더하기
+                 */
+            }
         }  // 무한반복 끝
     } // main e
 } // class e
