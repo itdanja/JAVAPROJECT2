@@ -1,0 +1,61 @@
+package Day05;
+
+import java.util.Scanner;
+
+public class EX3_예금프로그램 { // class s
+    public static void main(String[] args) { // main s
+        // int상자크기[4byte]의 '계좌번호'라는 이름으로 20221108 저장했다.
+        int 계좌번호 = 20221108;
+        // int상자크기[4byte]의 '비밀번호'라는 이름으로 1234 저장했다.
+        int 비밀번호 = 1234;
+        int 예금액 = 0; // 최초 예금액은 0 원
+
+        Scanner sc = new Scanner(System.in);
+
+        while ( true ) { // 무한반복 시작
+            System.out.println("========== 이젠 은행 메뉴 ==========");
+            System.out.print(" 1.예금 2.출금 3.잔고확인 4.종료  입력 >>>> : ");
+            int 선택 = sc.nextInt();
+            if( 선택 == 1 ) { // if 1 s
+                System.out.println("==== 예금 화면 ====");
+                System.out.print("계좌번호 : "); int 입력계좌 = sc.nextInt();
+                if( 계좌번호 == 입력계좌 ){ // 만약에 계좌번호 와 입력받은 입력계좌와 같으면
+                    System.out.print("예금액 : "); int 입력금액 = sc.nextInt();
+                    예금액 = 예금액 + 입력금액;
+                    System.out.println("안내] 입금이 완료 되었습니다,!! ");
+                } // if e
+                else{ // else s
+                    System.out.println("안내] 계좌번호 일치 하지 않습니다. ");
+                } // else e
+            } // if 1 e
+            else if( 선택 == 2 )   System.out.println("==== 출금 화면 ====");
+            else if( 선택 == 3 )   System.out.println("==== 잔고확인 화면 ====");
+            else if( 선택 == 4 )   { // else if 4 s
+                System.out.println("==== 시스템종료합니다. ====");
+                break; // 무한 반복 강제 종료
+            } // else if 4 e
+        }  // 무한반복 끝
+    } // main e
+} // class e
+
+/*
+    예금프로그램
+    - 전제조건 : 통장 1개  / 계좌번호 : 20221108 / 비밀번호 : 1234 / 예금액 : 0
+    - 기능 :   1. 예금   2. 출금    3. 잔고확인     4. 종료
+
+    1. 설계[준비물]
+        1.출력 println()   2.입력 Scanner  3. 저장[변수] 3개 + 입력받은 값 \
+    2. 순서도
+        1. 기본 변수 선언한다[ 3개 ]
+        ----------------------  무한 반복 while(true){ } ---------------
+        2. 메뉴 출력한다.
+        3. 메뉴 번호를 입력받는다.
+        4. 입력받은 번호를 저장한다.
+        5. 입력받은 값을 제어
+            입력받은 값이 1 이면  [ '예금 화면' 출력  ]
+            입력받은 값이 2 이면  [ '출금 화면' 출력  ]
+            입력받은 값이 3 이면  [ '잔고확인 화면' 출력  ]
+            입력받은 값이 4 이면  [ '시스템종료 합니다. ' 출력  ]
+        ------------------------------------------------
+ */
+
